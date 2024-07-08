@@ -33,6 +33,12 @@ RUN uv pip install --system -r requirements.txt --no-cache-dir
 # Copy the application code
 COPY . .
 
+# Create and copy the run_chroma.sh script
+RUN echo '#!/bin/bash\n\n# Default values\nDEFAULT_HOST="localhost"\nDEFAULT_PORT=3600\n\n# Get host and port from command line arguments, if provided\nHOST=${1:-$DEFAULT_HOST}\nPORT=${2:-$DEFAULT_PORT}\n\n# Run the chroma command with the specified or default host and port\nchroma run --path chroma_prod --host "$HOST" --port "$PORT"' > /app/run_chroma.sh
+
+# Make the script executable
+RUN chmod +x /app/run_chroma.sh
+
 # Expose the port
 ENV HOST="0.0.0.0"
 ENV PORT="9099"

@@ -10,3 +10,9 @@ pipelines/*
 
 .venv
 venv/
+
+.idea/
+
+*/.DS_Store
+*/.idea/
+*/.vscode/
