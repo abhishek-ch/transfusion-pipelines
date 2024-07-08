@@ -16,6 +16,7 @@ import chromadb.utils.embedding_functions as embedding_functions
 from utils.pipelines.main import get_last_user_message, get_last_assistant_message
 
 
+# Created by ABC
 class Pipeline:
     collection = None
 
