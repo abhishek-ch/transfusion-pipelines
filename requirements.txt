@@ -63,3 +63,10 @@ beautifulsoup4
 # Llama Index for RAG
 llama-index
 llama-index-llms-ollama
+
+# Custom for ChromaDB
+langchain-chroma==0.1.2
+langchain-community==0.2.6
+langchain-openai==0.1.14
+pypdf==4.1.0
+chromadb==0.5.3
