@@ -4,6 +4,9 @@ HOST="${HOST:-0.0.0.0}"
 # Default value for PIPELINES_DIR
 PIPELINES_DIR=${PIPELINES_DIR:-./pipelines}
 
+# Start the chroma server
+/app/run_chroma.sh &
+
 # Function to reset pipelines
 reset_pipelines_dir() {
   if [ "$RESET_PIPELINES_DIR" = true ]; then

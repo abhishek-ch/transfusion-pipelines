@@ -43,4 +43,6 @@ RUN chmod +x /app/run_chroma.sh
 ENV HOST="0.0.0.0"
 ENV PORT="9099"
 
+EXPOSE 3600
+
 ENTRYPOINT [ "bash", "start.sh" ]
