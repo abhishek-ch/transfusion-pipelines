@@ -9,4 +9,4 @@ HOST=${1:-$DEFAULT_HOST}
 PORT=${2:-$DEFAULT_PORT}
 
 # Run the chroma command with the specified or default host and port
-chroma run --path chroma_prod --host "$HOST" --port "$PORT"
+chroma run --path /app/chroma_prod --host "$HOST" --port "$PORT"
